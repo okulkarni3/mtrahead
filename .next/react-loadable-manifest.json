@@ -89,7 +89,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../styles/withStyles": [
+  "./withStyles": [
     {
       "id": 11,
       "name": "./node_modules/@material-ui/core/styles/withStyles.js",
@@ -445,7 +445,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../RuleList": [
+  "./RuleList": [
     {
       "id": 57,
       "name": "./node_modules/jss/lib/RuleList.js",
@@ -549,7 +549,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../utils/toCssValue": [
+  "./utils/toCssValue": [
     {
       "id": 71,
       "name": "./node_modules/jss/lib/utils/toCssValue.js",
@@ -581,7 +581,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "./colorManipulator": [
+  "../styles/colorManipulator": [
     {
       "id": 75,
       "name": "./node_modules/@material-ui/core/styles/colorManipulator.js",
@@ -653,7 +653,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../../modules/_wks-ext": [
+  "./_wks-ext": [
     {
       "id": 92,
       "name": "./node_modules/core-js/library/modules/_wks-ext.js",
@@ -1145,7 +1145,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "./StyleSheet": [
+  "../StyleSheet": [
     {
       "id": 161,
       "name": "./node_modules/jss/lib/StyleSheet.js",
@@ -2223,7 +2223,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../colors/indigo": [
+  "./indigo": [
     {
       "id": 422,
       "name": "./node_modules/@material-ui/core/colors/indigo.js",
@@ -2231,7 +2231,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../colors/pink": [
+  "./pink": [
     {
       "id": 423,
       "name": "./node_modules/@material-ui/core/colors/pink.js",
@@ -2239,7 +2239,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../colors/grey": [
+  "./grey": [
     {
       "id": 424,
       "name": "./node_modules/@material-ui/core/colors/grey.js",
@@ -2247,7 +2247,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../colors/red": [
+  "./red": [
     {
       "id": 425,
       "name": "./node_modules/@material-ui/core/colors/red.js",
@@ -2255,7 +2255,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../colors/common": [
+  "./common": [
     {
       "id": 426,
       "name": "./node_modules/@material-ui/core/colors/common.js",
@@ -2311,7 +2311,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "./transitions": [
+  "../styles/transitions": [
     {
       "id": 435,
       "name": "./node_modules/@material-ui/core/styles/transitions.js",
@@ -2439,7 +2439,7 @@
       "publicPath": "static/chunks/commons.aa530ef480c6d53582ed.js"
     }
   ],
-  "../styles/getThemeProps": [
+  "./getThemeProps": [
     {
       "id": 453,
       "name": "./node_modules/@material-ui/core/styles/getThemeProps.js",
