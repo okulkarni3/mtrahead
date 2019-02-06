@@ -6,6 +6,7 @@ import { Grid, Divider, Typography } from '@material-ui/core';
 import Introduction from '../components/Introduction';
 import FirstRestApi from '../components/firstRestApi';
 import Appbar from '../components/appBar';
+import FirstRapiQs from '../components/firstRestApiQs';
 
 const styles = theme => ({
   button: {
@@ -50,6 +51,9 @@ function ContainedButtons(props) {
             <FirstRestApi></FirstRestApi>
             </div>
             <Divider />
+            <div>
+              <FirstRapiQs></FirstRapiQs>
+            </div>
           </Grid>
           
         <Grid item sm={3}><NavigationList className={classes.test}></NavigationList></Grid>
