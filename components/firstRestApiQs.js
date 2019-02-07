@@ -36,14 +36,14 @@ class FirstRapiQs extends React.Component {
     verifyResult = () =>{
         let ans = this.state.answers;
         console.log(ans);
-        if(ans[1] ==="b" && ans[2] ==="a"){
+        if(ans[1] ==="c" && ans[2] ==="a"){
             this.setState(
                 {
                     dialogOpen:true,
                     dialogText: "Thank you for going through the Mulesoft trailhead. I am striving to make it better and your feedback is always welcome. Please contact me on okulkarni@acumensolutions.com"});
         } else {
             let wrongAns = [];
-            if(ans[1]!="b") wrongAns.push(1);
+            if(ans[1]!="c") wrongAns.push(1);
             if(ans[2] != "a") wrongAns.push(2);
             this.setState({dialogOpen:true,
                 dialogText : "You will have to retake the quiz. Wrong answer(s) for question(s) "+wrongAns})
