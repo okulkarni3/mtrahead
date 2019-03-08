@@ -31,11 +31,9 @@ class FirstRapiQs extends React.Component {
         let ans = this.state.answers;
         ans[question] = answer;
         this.setState({answers:ans});
-        console.log(this.state.answers);
     }
     verifyResult = () =>{
         let ans = this.state.answers;
-        console.log(ans);
         if(ans[1] ==="c" && ans[2] ==="a"){
             this.setState(
                 {
@@ -104,7 +102,6 @@ class FirstRapiQs extends React.Component {
                 </CardContent>
                 <Divider/>
                 <CardActions>
-                    
                     <Button variant="contained" color="primary" className={classes.verifyBtn} onClick={this.verifyResult}>Verify</Button>
                 </CardActions>
             </Card>

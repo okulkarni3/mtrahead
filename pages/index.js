@@ -1,70 +1,82 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import NavigationList from '../components/NavigationList';
-import { Grid, Divider, Typography } from '@material-ui/core';
-import Introduction from '../components/Introduction';
-import FirstRestApi from '../components/firstRestApi';
+import { withStyles } from '@material-ui/core/styles';
+import { GridList, GridListTile, ListSubheader, GridListTileBar, ButtonBase } from '@material-ui/core';
+import Link from 'next/link'
 import Appbar from '../components/appBar';
-import FirstRapiQs from '../components/firstRestApiQs';
+//import fetch from 'isomorphic-unfetch'
 
 const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-  },
-  input: {
-    display: 'none',
-  },
   root: {
-    flexGrow: 1
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
   },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+  gridList: {
+    width: 500,
+    height: 450,
   },
-  test: {
-    position:'-webkit-sticky',
-    postition: 'sticky'
-  }
+  icon: {
+    color: 'rgba(255, 255, 255, 0.54)',
+  },
+  img: {
+    position: 'relative',
+    height: 'auto',
+    maxWidth: 250
+  },
 });
 
 function ContainedButtons(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <React.Fragment> 
     <Appbar></Appbar>
-      <Grid container alignItems="stretch" spacing={0}>
-        <Grid item xs={1}></Grid>
-        <Grid item lg={8}>
-          <a name="introduction">
-            <Typography variant="overline">Installation and setup</Typography>
-          </a>
-          <div>
-            <Introduction></Introduction>
-          </div>
-          <Divider />
-          <a name="httpListener">
-            <Typography variant="overline">Create HTTP Listener</Typography>
-          </a>
-          <div>
-            <FirstRestApi></FirstRestApi>
-            </div>
-            <Divider />
-            <div>
-              <FirstRapiQs></FirstRapiQs>
-            </div>
-          </Grid>
-          
-        <Grid item sm={3}><NavigationList className={classes.test}></NavigationList></Grid>
-      </Grid>
-
+    <div className={classes.root}>
+      <GridList cellHeight={180} spacing={16} className={classes.gridList}>
+        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+          <ListSubheader component="div">Trailheads</ListSubheader>
+        </GridListTile>
+          <GridListTile key="Salesforce API">
+            <ButtonBase
+            focusRipple
+            key="Salesforce API"
+            >
+            <Link href="/firstApi"><img src="/static/firstApi.jpg" className={classes.img}></img></Link>
+            </ButtonBase>
+            <GridListTileBar
+              title="Simple Salesforce API"
+            />
+          </GridListTile>
+          <GridListTile key="RAML API">
+            <ButtonBase
+            focusRipple
+            key="RAML API"
+            >
+            <Link href="/ramlApi"><img src="/static/ramlApi.jpg" className={classes.img}></img></Link>
+            </ButtonBase>
+            <GridListTileBar
+              title="Simple RAML API"
+            />
+          </GridListTile>
+        ))}
+      </GridList>
     </div>
+    </React.Fragment>
   );
 }
 
 ContainedButtons.propTypes = {
   classes: PropTypes.object.isRequired,
 };
+
+/*ContainedButtons.getInitialProps = async function() {
+  const res = await fetch('https://api.github.com/repos/okulkarni3/mtrahead/contents/static/JdkDownload.jpg');
+  const data = await res.json();
+  return {
+    img: data.content.replace("\n","")
+  }
+}*/
 
 export default withStyles(styles)(ContainedButtons)

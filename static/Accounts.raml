@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: Accounts API
+description: This is a simple Salesforce API.
+version: 1.0.0
+protocols:
+  - HTTP
+baseUri: 'http://localhost:8081'
+types:
+  Account:
+    type: object
+    properties:
+      name:
+        example: My Account
+        type: string
+      id:
+        example: 011223321ADQA0A
+        type: string
+  error:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+/accounts:
+  get:
+    responses:
+      '200':
+        description: A successful response from Salesforce.
+        body:
+          application/json:
+            type: array
+            items:
+              type: Account
+      '400':
+        description: Invalid input
+        body:
+          application/json:
+            type: array
+            items:
+              type: error
+      '500':
+        description: Server internal error
+        body:
+          application/json:
+            type: array
+            items:
+              type: error
